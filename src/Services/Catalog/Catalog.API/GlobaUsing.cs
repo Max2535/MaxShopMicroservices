@@ -11,3 +11,4 @@ global using Catalog.API.Data;
 global using FluentValidation;
 global using Marten.Pagination;
 
+
