@@ -26,10 +26,21 @@ builder.Services.AddMarten(opts =>
 }).UseLightweightSessions();
 if (builder.Environment.IsDevelopment()) builder.Services.InitializeMartenWith<CatalogInitialData>();
 
+builder.Services.AddScoped<ICatalogRepository, CatalogRepository>();
+builder.Services.Decorate<ICatalogRepository, CachedCatalogRepository>();
+//Cache Services
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "Catalog";
+});
+
+
 //Cross-Cutting Services
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("Database")!);
+    .AddNpgSql(builder.Configuration.GetConnectionString("Database")!)
+    .AddRedis(builder.Configuration.GetConnectionString("Redis")!);
 
 var app = builder.Build();
 

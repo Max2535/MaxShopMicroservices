@@ -3,14 +3,12 @@
 public record GetProductByCategoryQuery(string Category) : IQuery<GetProductByCategoryResult>;
 public record GetProductByCategoryResult(IEnumerable<Product> Products);
 internal class GetProductByCategoryQueryHandler
-    (IDocumentSession session)
+    (ICatalogRepository cached)
     : IQueryHandler<GetProductByCategoryQuery, GetProductByCategoryResult>
 {
     public async Task<GetProductByCategoryResult> Handle(GetProductByCategoryQuery query, CancellationToken cancellationToken)
     {
-        var products = await session.Query<Product>()
-            .Where(p=>p.Category.Contains(query.Category))
-            .ToListAsync(cancellationToken);
+        var products = await cached.GetProductByCategory(query.Category, cancellationToken);
         return new GetProductByCategoryResult(products);
     }
 }
