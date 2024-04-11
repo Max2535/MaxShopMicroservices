@@ -1,0 +1,6 @@
+﻿dotnet tool update --global dotnet-ef
+dotnet tool update --global dotnet-ef --version 3.1.0
+
+dotnet ef migrations add InitialCreate 
+dotnet ef database update
+dotnet ef migrations remove
