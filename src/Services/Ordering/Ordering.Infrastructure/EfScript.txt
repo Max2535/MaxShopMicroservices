@@ -1,6 +1,9 @@
 ﻿dotnet tool update --global dotnet-ef
 dotnet tool update --global dotnet-ef --version 3.1.0
 
-dotnet ef migrations add InitialCreate 
+dotnet ef migrations add InitialCreateOrder -o Data/Migrations -p Ordering.Infrastructure -s Ordering.API
 dotnet ef database update
 dotnet ef migrations remove
+
+
+Add-Migration InitialCreateOrder -Output Data/Migrations -Project  Ordering.Infrastructure -StartupProject Ordering.API
