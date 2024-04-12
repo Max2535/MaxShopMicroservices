@@ -4,7 +4,7 @@ namespace Catalog.API.Products.DeleteProduct
 {
     //class immutable
     public record DeleteProductCommand(Guid Id):ICommand<DeleteProductResult>;
-    public record DeleteProductResult(bool IsDelete);
+    public record DeleteProductResult(bool IsSuccess);
 
     public class DeleteProductCommandValidator : AbstractValidator<DeleteProductCommand>
     {

@@ -1,6 +1,6 @@
 ﻿namespace Basket.API.Basket.DeleteBasket;
 //public record DeleteBasketRequest(string UserName);
-public record DeleteBasketResponse(bool IsDelete);
+public record DeleteBasketResponse(bool IsSuccess);
 public class CheckoutBasketEndpoints : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
