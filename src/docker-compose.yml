@@ -3,25 +3,20 @@ version: '3.4'
 services:
   catalogdb:
     image: postgres
-
   basketdb:
     image: postgres
-
   distributedcache:
     image: redis
-
   orderdb:
     image: mcr.microsoft.com/mssql/server
-
   messagebroker:
-    image: rabbitmq:management
+    image: rabbitmq:management  
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
-
   basket.api:
     image: ${DOCKER_REGISTRY-}basketapi
     build:
@@ -38,8 +33,11 @@ services:
     image: ${DOCKER_REGISTRY-}orderingapi
     build:
       context: .
-      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+      dockerfile: Services/Ordering/Ordering.API/Ordering.API/Dockerfile
 
 volumes:
   postgres_catalog:
   postgres_basket:
+
+
+
