@@ -25,15 +25,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Grpc", "Services\D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{3F23967B-6027-47B7-88E7-F503485FD1EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API\Ordering.API.csproj", "{44519C3F-26FF-4F6C-8809-E46EE30C1D2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API\Ordering.API.csproj", "{44519C3F-26FF-4F6C-8809-E46EE30C1D2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{56017EAD-93DB-4982-B3A9-214CB8B92C02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{56017EAD-93DB-4982-B3A9-214CB8B92C02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{CA909F1B-0DB8-48CC-97B7-E3AC0DBBD141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{CA909F1B-0DB8-48CC-97B7-E3AC0DBBD141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{650D3BEC-29AE-4C7D-B710-3D9BA5FE9CB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{650D3BEC-29AE-4C7D-B710-3D9BA5FE9CB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Messaging", "BuildingBlocks\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj", "{08F9DF67-09C9-4317-83A6-F4EB5017314D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Messaging", "BuildingBlocks\BuildingBlocks.Messaging\BuildingBlocks.Messaging.csproj", "{08F9DF67-09C9-4317-83A6-F4EB5017314D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YarpApiGateway", "ApiGateways\YarpApiGateway\YarpApiGateway.csproj", "{7EE6EF12-659E-44F4-8016-0163C5DD9397}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{08F9DF67-09C9-4317-83A6-F4EB5017314D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08F9DF67-09C9-4317-83A6-F4EB5017314D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08F9DF67-09C9-4317-83A6-F4EB5017314D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE6EF12-659E-44F4-8016-0163C5DD9397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE6EF12-659E-44F4-8016-0163C5DD9397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE6EF12-659E-44F4-8016-0163C5DD9397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE6EF12-659E-44F4-8016-0163C5DD9397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
